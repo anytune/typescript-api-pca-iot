@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { getRepository } from 'typeorm';
 
-import Attendance from '../models/Attendance';
+import Attendance from '../models/Attendance.entity';
 
 class AttendanceController {
     async store (request: Request, response: Response) {

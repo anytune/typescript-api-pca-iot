@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { getRepository } from 'typeorm';
 
-import File from '../models/File';
+import File from '../models/File.entity';
 
 class FileController {
     async store (request: Request, response: Response) {
