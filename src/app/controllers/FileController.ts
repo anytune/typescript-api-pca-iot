@@ -19,7 +19,7 @@ class FileController {
         return response.status(201).json(file);
     }
 
-    async index (request: Request, response: Response) {
+    async index (_: Request, response: Response) {
         const repository = getRepository(File);
 
         const files = await repository.find();
