@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "build": "tsc",
     "run:dev": "ts-node-dev --respawn --transpile-only src/index.ts",
     "typeorm": "npx ts-node ./node_modules/typeorm/cli.js",
     "start": "node dist/index.js"
