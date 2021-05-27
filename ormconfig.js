@@ -7,11 +7,11 @@ module.exports = {
     "database": process.env.TYPEORM_DATABASE,
     "entities": [
         "src/app/models/*.ts",
-        "./dist/app/models/*.js"
+        __dirname + "/dist/app/models/**/*.js"
     ],
     "migrations": [
         "src/database/migrations/*.ts",
-        "./dist/database/migrations/*.js"
+        __dirname + "/dist/database/migrations/**/*.js"
     ],
     "cli": {
         "migrationsDir": "src/database/migrations/*.ts"
