@@ -7,10 +7,10 @@ module.exports = {
     database: process.env.ENV_TYPEORM_DATABASE,
     synchronize: false,
     entities: [ 
-        process.env.PORT ? "build/app/models/*.entity.js" : "src/app/models/*.entity.ts"
+        process.env.PORT ? __dirname + "build/app/models/*.entity{.js.ts}" : "src/app/models/*.entity.ts"
     ],
     migrations: [
-        process.env.PORT ? "build/database/migrations/*.js" : "src/database/migrations/*.ts"
+        process.env.PORT ? __dirname + "/build/database/migrations/*{.js.ts}" : "src/database/migrations/*{.js.ts}"
     ],
     cli: {
         entitiesDir: "src/app/models",
