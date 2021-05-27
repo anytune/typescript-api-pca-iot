@@ -7,7 +7,7 @@
     "build": "tsc",
     "run:dev": "ts-node-dev --respawn --transpile-only src/index.ts",
     "typeorm": "npx ts-node ./node_modules/typeorm/cli.js",
-    "start": "node dist/index.js"
+    "start": "node build/index.js"
   },
   "devDependencies": {
     "@types/cors": "^2.8.10",
