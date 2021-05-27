@@ -3,4 +3,4 @@ ormconfig.env
 node_modules
 tmp
 
-./dist
+build/

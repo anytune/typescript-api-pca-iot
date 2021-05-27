@@ -1,7 +1,7 @@
 import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm'
 
 @Entity('files')
-class Files {
+class File {
     @PrimaryGeneratedColumn("uuid")
     id: string;
 
@@ -21,4 +21,4 @@ class Files {
     updated_at: Date;
 }
 
-export default Files;
+export default File;
