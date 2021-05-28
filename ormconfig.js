@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
     type: process.env.ENV_TYPEORM_CONNECTION,
     host: process.env.ENV_TYPEORM_HOST,
@@ -7,8 +9,8 @@ module.exports = {
     database: process.env.ENV_TYPEORM_DATABASE,
     synchronize: false,
     entities: [ 
-        "build/**/*.entity{.js,.ts}",
-        "src/**/*.entity{.js,.ts}"
+        process.env.PORT ?
+            path.join(__dirname, 'build/**/**.entity{.ts,.js}') : 'src/**/*.entity{.ts,.js}'
     ],
     migrations: [
         "build/database/migrations/**/*{.js.ts}",
